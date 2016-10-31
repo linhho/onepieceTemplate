@@ -1,0 +1,339 @@
+/* 
+*Import font 
+*Author: Linh Hoo
+*/
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black');
+/* 
+*The animation code 
+*Author: Linh Hoo
+*/
+@keyframes leftToRight-opacity {
+    0%   {
+        left: -15%;
+        opacity: 0;
+    },
+    20%   {
+        left: 15%;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes rightToLeft-opacity {
+    0%   {
+        left: 15%;
+        opacity: 0;
+    },
+    20%   {
+        left: 15%;
+        opacity: 0;
+    }
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes opacity {
+    0%   {
+        opacity: 0;
+    },
+    20%   {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 
+*Style 
+*Author: Linh Hoo
+*/
+html, body {
+    overflow: hidden !important;
+}
+nav {
+    background-color: #e65100;
+    top:0px;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+#website-content {
+    position: relative;
+    overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
+    height: 100vh;
+    z-index: 69;
+}
+/* 
+*Parallax header 
+*Author: Linh Hoo
+*/
+#header-parallax {
+    position: relative;
+    overflow: hidden!important;
+}
+#header-parallax.parallax-container {
+    height: 100vh;
+}
+.brand-logo {
+    font-family: 'Archivo Black', sans-serif;
+}
+.brand-logo img {
+    height: 40px;
+    margin-top: 10px;
+    float: left;
+}
+.ch_info {
+    display: none;
+}
+#character-luffy {
+    display: inline;
+}
+
+.ch_img {
+    max-height: 100vh;
+    max-width: 100%;
+    position: relative;
+    -webkit-animation-name: leftToRight-opacity; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    animation-name: leftToRight-opacity;
+    animation-duration: 2s;
+}
+
+.character-infor {
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    height: 500px;
+    max-height: 70vh;
+    background-image: url("../img/character-infor-bg.png");
+    background-repeat:repeat;
+    color: white;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    -webkit-animation-name: rightToLeft-opacity; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    animation-name: rightToLeft-opacity;
+    animation-duration: 2s;
+}
+.character-name {
+    text-align: center;
+    font-size: 40px;
+}
+.character h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.character-avatar-list {
+    position: absolute;
+    z-index: 69;
+    max-height: 90vh;
+    top: 30px;
+    left: 10px;
+}
+@media only screen and (max-width: 600px) {
+    .character-infor {
+        position: absolute;
+        top: 20px;
+        left: 0 !important;
+    }
+    .character-avatar-list {
+        top: 10px;
+    }
+}
+.character-avatar-list li {
+    opacity: 0.5;
+}
+.character-avatar-list li img {
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+/*
+*character avatar
+*/
+#luffy-avatar {
+    opacity: 1;
+}
+/*
+*/
+
+
+#downToUpScreen {
+    position: relative;
+    z-index: 96;
+    top: 100vh;
+    left: 50vw;
+    
+}
+
+@keyframes changlocation {
+  from {
+    margin-top: 4px;
+    margin-left: 4px;
+  }
+
+  to {
+    margin-top: 7px;
+    margin-left: 7px;
+  }
+}
+
+#downToUpScreen div {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    top: -50px;
+    left: -60px;
+    /*transform 45*/
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Safari */
+    transform: rotate(45deg);
+    /*animate*/
+    -webkit-animation-name: opacity; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    animation-name: opacity;
+    animation-duration: 2s;
+}
+
+#downToUpScreen div a i {
+    position: relative;
+    -ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Safari */
+    transform: rotate(-45deg);
+    margin-top: 7px;
+    margin-left: 7px;
+    font-size: 3rem;
+    animation-duration: 0.2s;
+    animation-name: changlocation;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/*
+* Card style
+*/
+.card-header {
+    width: 100%;
+    clear: both;
+}
+.author-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+.card-header .card-title {
+    position:absolute;
+    margin-top: 2px;
+    font-size: 20px !important;
+    width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-time {
+    position:absolute;
+    margin-top: 30px;
+    font-size: 12px !important;
+    width: 80%;
+}
+/*
+*side-nav
+*/
+.side-nav {
+    z-index: 969;
+    top: 63px;
+    background-color: #e65100;
+}
+footer {
+    margin-bottom: 63px;
+}
+@media only screen and (max-width: 600px) {
+    .side-nav {
+        top: 55px;
+    }
+    footer {
+    margin-bottom: 55px;
+}
+}
+
+.top-content {
+    position: relative;
+    margin-top: 30px;
+}
+
+.poster img {
+    width: 100%;
+    max-height: 680px;
+}
+
+/*
+* Menu SVG
+*/
+
+/* Menu icon styles */
+
+.menu-icon-wrapper {
+	position:absolute;
+	display: inline-block;
+    width: 63px;
+    height: 63px;
+	margin-top: -3px;
+    
+	pointer-events: none;
+	transition: 0.1s;
+}
+
+.menu-icon-wrapper.scaled {
+	-webkit-transform: scale(0.5);
+	-ms-transform: scale(0.5);
+	transform: scale(0.5);
+}
+
+.menu-icon-wrapper svg {
+	position: absolute;
+	top: -16px;
+	left: -20px;
+	-webkit-transform: scale(0.1);
+	-ms-transform: scale(0.1);
+	transform: scale(0.1);
+	-webkit-transform-origin: 0 0;
+	-ms-transform-origin: 0 0;
+	transform-origin: 0 0;
+}
+
+.menu-icon-wrapper svg path {
+	stroke: #fff;
+	stroke-width: 40px;
+	stroke-linecap: round;
+    stroke-linejoin: round;
+	fill: transparent;
+}
+
+.menu-icon-wrapper .menu-icon-trigger {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	pointer-events: auto;
+	background: none;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menu-icon-wrapper .menu-icon-trigger:hover,
+.menu-icon-wrapper .menu-icon-trigger:focus {
+	outline: none;
+}

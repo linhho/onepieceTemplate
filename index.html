@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--    <meta name="viewport" content="width=device-width, minimal-ui"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <meta content="#e65100" name="theme-color" /><!-- Windows Phone -->
+	<meta content="#e65100" name="msapplication-navbutton-color" /><!-- iOS Safari -->
+	<meta content="#e65100" name="apple-mobile-web-app-status-bar-style" />
+    <title>Home 1</title>
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+<!--    calendar css-->
+    <link rel="stylesheet" href="calendar-lib/css/fullcalendar.css">
+    <link rel="stylesheet" href="calendar-lib/css/fullcalendar.print.css" media='print'>
+    
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <script src="js/segment.min.js"></script>
+    <script src="js/ease.min.js"></script>
+</head>
+<body>
+        
+    <header id="header-parallax" class="parallax-container scrollspy">
+      <div class="parallax"><img src="img/bg.jpg"></div>
+      <div class="parallax-content row">
+        <side id="downToUpScreen" class="col s12">
+            <div class="z-depth-2  orange darken-4">
+                <a href="#navigation" class="white-text downToUpAction"><i class="material-icons">arrow_downward</i></a>
+            </div>
+        </side>
+        <ul class="character-avatar-list">    
+            <li id="luffy-avatar" character-name="#character-luffy">
+                <img src="img/luffy-avatar.png" alt="Luffy avatar">
+            </li>
+            <li character-name="#character-zoro">
+                <img src="img/zoro-avatar.png" alt="Zoro avatar">
+            </li>
+            <li character-name="#character-nami">
+                <img src="img/nami-avatar.png" alt="Nami avatar">
+            </li>
+            <li character-name="#character-usopp">
+                <img src="img/usopp-avatar.jpg" alt="Usopp avatar">
+            </li>
+            <li character-name="#character-sanji">
+                <img src="img/sanji-avatar.jpg" alt="sanji avatar">
+            </li>
+            <li character-name="#character-chopper">
+                <img src="img/chopper-avatar.png" alt="chopper avatar">
+            </li>
+            <li character-name="#character-robin">
+                <img src="img/robin-avatar.jpg" alt="robin avatar">
+            </li>
+            <li character-name="#character-franky">
+                <img src="img/franky-avatar.jpg" alt="franky avatar">
+            </li>
+            <li character-name="#character-brook">
+                <img src="img/brook-avatar.jpg" alt="brook avatar">
+            </li>
+        </ul>
+        <div id="character-luffy" class="ch_info">
+            <side class="character-picture col s12 l6">
+                <img class="ch_img" src="img/Luffy-transparent.png" alt="luffy">
+            </side>
+            <side class="character-infor col s12 l6">
+                <div class="character">
+                    <h1 class="character-name">Monkey D. Luffy</h1>
+                    <div>
+                        <h2>
+                            <i class="material-icons">cake</i> May 5th |
+                            <i class="material-icons">attach_money</i> 500.000.000
+                        </h2>
+                    </div>
+                    <span>
+                        Luffy is renowned for his trademark straw hat (from which he gets his nickname "Straw Hat Luffy"), which was lent to him when he was young by the legendary pirate captain, "Red-Haired" Shanks, who in turn received it from Gol D. Roger. He wears short, blue trousers with cuffs, sandals, and a sleeveless red vest. Luffy also has a scar with two stitches underneath his left eye (which he earned by stabbing a knife under his eye to show Shanks that he was tough) and short, messy black hair. He was severely wounded by Akainu in the Battle of Marineford, leaving a large X-shaped scar on his chest. Appearing to be scrawny underneath his shirt, he has a surprisingly well-built physique. He is quite short since he appears dwarfed by most individuals in the series (though it must be noted that characters in One Piece are often very tall for real life standards).
+                    </span>
+                </div>
+            </side>
+        </div>
+        <div id="character-zoro" class="ch_info">
+            <side id="character-picture" class="col s12 l6">
+                <img class="ch_img" src="img/Zoro-transparent.png" alt="zoro">
+            </side>
+            <side class="character-infor col s12 l6">
+                <div class="character">
+                    <h1 class="character-name">Roronoa Zoro</h1>
+                    <div>
+                        <h2>
+                            <i class="material-icons">cake</i> November 11th |
+                            <i class="material-icons">attach_money</i> 320,000,000
+                        </h2>
+                    </div>
+                    <span>
+                        Zoro is a muscular young man with lightly tanned skin. He always carries his three swords along with him, bundled up with a green haramaki over his right hip, allowing him to easily draw them with his left hand. Of the three swords he has on his person, he has always been seen carrying the Wado Ichimonji, while his other two swords have varied over time due to them being destroyed and subsequently replaced with progressively better ones. Although his right hand is usually seen resting over them, he can also use this hand to pull his swords out before sitting down. He has three identical gold earrings on his left earlobe. Zoro normally keeps a black bandanna tied around his left bicep and ties it around his head when he is fighting seriously against an opponent.
+                    </span>
+                </div>
+            </side>
+        </div>
+        <div id="character-nami" class="ch_info">
+            <side id="character-picture" class="col s12 l6">
+                <img class="ch_img" src="img/Nami-transparent.png" alt="nami">
+            </side>
+            <side class="character-infor col s12 l6">
+                <div class="character">
+                    <h1 class="character-name">Nami</h1>
+                    <div>
+                        <h2>
+                            <i class="material-icons">cake</i> July 3rd |
+                            <i class="material-icons">attach_money</i> 66,000,000
+                        </h2>
+                    </div>
+                    <span>
+                        Nami is a slim young woman of average height, with orange hair and light brown eyes. Many people consider her to be very attractive or even beautiful.[13] She has a black tattoo (blue in the anime.)[14] on her left shoulder, which represents mikan, and pinwheels (a homage to Bell-mère, Nojiko, and Genzo, respectively), where she used to have a tattoo for being a member of Arlong's crew.[1]
+                        <br>
+                        Her overall physique matured suddenly (though this is, most likely, a simple change in style of artwork). Her fashion frequently changes as does her hair style. Many of her shirts feature four-letter words, such as "MODE", "GOLD", or "EVIL", similar to a shirt that Bell-mère once wore that had "MACE" on it. On her left wrist, she wears the Log Pose, which she needs in order to be the navigator of the ship, and a gold bracelet, given to her by her sister, Nojiko.[15] After the Arlong Park Arc, Nami frequently changes into a variety of clothes in the series for each arc, and usually pairs her tops with skirts that have two rings on the sides. Her trademark shoes are orange high-heeled gladiator sandals. Nami wears some form of high heels in every arc, and while they do make her taller, they do not seem to affect the way she walks or her speed. Though she tends to style her hair neatly, occasionally, a hair on top of her head may form into a messy cowlick.
+                    </span>
+                </div>
+            </side>
+        </div>
+        <div id="character-usopp" class="ch_info">
+            <side id="character-picture" class="col s12 l6">
+                <img class="ch_img" src="img/Usopp-transparent.png" alt="usopp">
+            </side>
+            <side class="character-infor col s12 l6">
+                <div class="character">
+                    <h1 class="character-name">Usopp</h1>
+                    <div>
+                        <h2>
+                            <i class="material-icons">cake</i> April 1st |
+                            <i class="material-icons">attach_money</i> 200,000,000
+                        </h2>
+                    </div>
+                    <span>
+                        "God" Usopp is the sniper of the Straw Hat Pirates, and the former captain of the Usopp Pirates. When Usopp was first introduced, he was often (comically) labeled as the "Liar" of the Straw Hat Pirates, due to the "Uso" (うそ) in his name meaning "lie" or "falsehood". He was born in Syrup Village, and was first mentioned by Yasopp, his father. He was officially the third (unofficially fourth) member of the crew, and the third to join, and, including Nami and Robin, also the third to rejoin, doing so at the end of the Post-Enies Lobby Arc. His original bounty of Beli30,000,000 was credited to his alias and alter-ego "Sogeking".[2] He is also considered one of the "weak" trio of the crew, along with Nami and Chopper. After awakening Kenbunshoku Haki,[10] he became the fourth member of the Straw Hat crew to demonstrate and use a form of Haki. His current bounty, Beli200,000,000, is a huge jump from his original, due to his role as "God" for saving all those toy slaves in Doflamingo's underground trades; this takes him from the third lowest bounty of the crew to the third highest, jumping past the previous holder, Nico Robin.[9]
+                    </span>
+                </div>
+            </side>
+        </div>
+        <div id="character-sanji" class="ch_info">
+            <side id="character-picture" class="col s12 l6">
+                <img class="ch_img" src="img/Sanji-transparent.png" alt="sanji">
+            </side>
+            <side class="character-infor col s12 l6">
+                <div class="character">
+                    <h1 class="character-name">Vinsmoke Sanji</h1>
+                    <div>
+                        <h2>
+                            <i class="material-icons">cake</i> March 2nd |
+                            <i class="material-icons">attach_money</i> 177,000,000
+                        </h2>
+                    </div>
+                    <span>
+                        Sanji is a slim, yet muscular, long-legged young man with blond hair and keeps his hair brushed over one side of his face. For the initial part of the series, this was the left side. Due to his left eye never being seen, many fans questioned whether he had one at all.[12] In the manga it was usually covered one way or another, but is seen in the anime (Episodes 20, 21, 27, 82, and Movie 6 and 10 although usually very briefly and most likely due to animation errors). Later, after the two year timeskip, he switched his hairstyle so that it covers the right side. It also appears that Sanji's hair is less straight and scruffier after the timeskip.[13]
+                        <br>
+                        Among Sanji's physical traits are his distinctive eyebrows. Both form a spiral but at different ends. His right eyebrow forms a spiral at the outer end, while his left eyebrow forms a spiral at the inner end; both resemble the numeral 6. This means his face is asymmetrical with the position of his eyebrow spirals. This, however, is not fully seen due to his hairstyle. He still gets very upset if somebody, typically Zoro, mocks him over the spirals. Though, on rare occasions, Sanji's other eye was seen in the anime, the spiral was never witnessed.
+                        <br>
+                        While Sanji's eyes usually seem black, he was depicted with grey-blue eyes in the anime at the beginning of Thriller Bark Arc.[14]
+                        <br>
+                        Sanji almost always wears a black, double-breasted suit with a tie and a long-sleeved, buttoned shirt of varying colors, usually orange, blue, turquoise, or black, with or without pinstripes. His outfit changes on a more frequent basis than most of the crew.
+                    </span>
+                </div>
+            </side>
+        </div>
+        <div id="character-chopper" class="ch_info">
+            <side id="character-picture" class="col s12 l6">
+                <img class="ch_img" src="img/Chopper-transparent.png" alt="chopper">
+            </side>
+            <side class="character-infor col s12 l6">
+                <div class="character">
+                    <h1 class="character-name">Tony Tony Chopper</h1>
+                    <div>
+                        <h2>
+                            <i class="material-icons">cake</i> December 24th |
+                            <i class="material-icons">attach_money</i> 100
+                        </h2>
+                    </div>
+                    <span>
+                        Most of the time, Chopper is a toddler-sized human/reindeer hybrid, but his Devil Fruit abilities allow him to change his appearance depending on the situation. Chopper's left antler is braced at the base by a metal plate because it was reattached after being broken during his search for the Amiudake when he was younger (where he thought the Amiudake can cure Hiluluk's disease) and ran into the leader of his old herd, who severely injured him.[7] He usually wears a large pale red/pink fuzzy top hat with a sideways medical cross (given to him by Hiluluk) and a maroon pair of shorts. He also sometimes wears a blue backpack that has the same sideways medical cross as his hat. He also has a remarkable blue nose. As Oda's style evolved and many readers commented on how cute Chopper was, Chopper has been given a much more "chibi" like appearance, meaning that when in his preferred transformation (which he calls Brain Point), he has a larger head and eyes and a less defined muzzle than earlier in the series. Many female characters, such as Nami, Robin, Makino, Porche, Shakky, and Vivi find Chopper very cute. There are even males that find Chopper cute such as Foxy.
+                        <br>
+                        A running gag is that various characters in One Piece think Chopper is a tanuki (raccoon-dog, often simply translated as "a raccoon") while in his Brain Point or hybrid form. The word "tonakai", which is the Japanese word for "reindeer", is where the "Tony" in Chopper's name is derived from. His Heavy Point or human form is likewise mistaken for a gorilla (or an abominable snowman on his home island).
+                    </span>
+                </div>
+            </side>
+        </div>
+        <div id="character-robin" class="ch_info">
+            <side id="character-picture" class="col s12 l6">
+                <img class="ch_img" src="img/Robin-transparent.png" alt="robin">
+            </side>
+            <side class="character-infor col s12 l6">
+                <div class="character">
+                    <h1 class="character-name">Nico Robin</h1>
+                    <div>
+                        <h2>
+                            <i class="material-icons">cake</i> February 6th |
+                            <i class="material-icons">attach_money</i> 130,000,000
+                        </h2>
+                    </div>
+                    <span>
+                        Nico Robin is a tall, slender, yet athletic woman with shoulder-length black hair. In the manga, she is depicted with brown eyes, with dark, wide pupils. In the anime, she is depicted with blue, excluding the tenth and the twelfth movie, and she has a long, thin and defined nose. In the anime, Robin's skin tone is slightly darker unlike in manga colored artworks where it is lighter. Robin also resembles her mother greatly, with the exception of her hair color and style as well as having slightly darker skin tone than her. Robin's limbs are very long, especially her legs, contributing greatly to both her fighting capabilities (given the nature of her powers) and overall height.
+                    </span>
+                </div>
+            </side>
+        </div>
+        <div id="character-franky" class="ch_info">
+            <side id="character-picture" class="col s12 l6">
+                <img class="ch_img" src="img/franky-transparent.png" alt="franky">
+            </side>
+            <side class="character-infor col s12 l6">
+                <div class="character">
+                    <h1 class="character-name">Franky</h1>
+                    <div>
+                        <h2>
+                            <i class="material-icons">cake</i> March 9th |
+                            <i class="material-icons">attach_money</i> 94,000,000
+                        </h2>
+                    </div>
+                    <span>
+                        "Iron Man" Franky[10][2] is the shipwright for the Straw Hat Pirates.
+                        <br>
+                        A cyborg from Water 7, he was originally the leader of the Franky Family, a group of ship dismantlers. He is originally from South Blue, but left 32 years ago as a four-year-old child. He was originally named "Cutty Flam" until he threw away his original name for his nickname per the request of Iceburg to hide his identity.
+                        <br>
+                        Franky and his followers were originally enemies of the Straw Hats until circumstances forced them to become allies. At the request of the Franky Family, Franky decided to join the Straw Hats to fulfill his dream of creating and riding a ship capable of circumnavigating the world, the Thousand Sunny. He is the eighth member of the Straw Hat crew and the seventh to join Luffy's crew. He currently has a bounty of 94,000,000. Previously going by the epithet, "Cyborg" Franky, after most likely having his favourite weapon being confused as his main body by the authorities, he has since gained the new nickname, "Iron Man".
+                    </span>
+                </div>
+            </side>
+        </div>
+        <div id="character-brook" class="ch_info">
+            <side id="character-picture" class="col s12 l6">
+                <img class="ch_img" src="img/Brook-transparent.png" alt="brook">
+            </side>
+            <side class="character-infor col s12 l6">
+                <div class="character">
+                    <h1 class="character-name">Brook</h1>
+                    <div>
+                        <h2>
+                            <i class="material-icons">cake</i> April 3rd |
+                            <i class="material-icons">attach_money</i> 83,000,000
+                        </h2>
+                    </div>
+                    <span>
+                        "Soul King" Brook is the musician of the Straw Hat Pirates. He is a skeleton that the Straw Hats found on board of a ghost ship after drifting into the Florian Triangle. He is a Devil Fruit user who ate the Yomi Yomi no Mi, and is undead, having been brought back into a pseudo-immortal state because of its powers. He is the ninth member of the Straw Hat crew, and the ninth to join Luffy's crew, as well as being the oldest member on board. He is also one of the two swordsmen onboard their current ship, with the other being Roronoa Zoro. He fills the role of the long-awaited musician that Luffy had wanted for his crew ever since his journey began. He currently has a bounty of 83,000,000
+                    </span>
+                </div>
+            </side>
+        </div>
+      </div>
+    </header>
+    <ul id="sidenav-onepiece" class="side-nav">
+        <li>
+          <img class="background" src="img/side-nav-bg.jpg">
+        </li>
+        <li class="category"><a href="#!" class="white-text"><i class="material-icons white-text">home</i>Home</a></li>
+        <li class="category"><a href="#!"><i class="material-icons">language</i>One Piece News</a></li>
+        <li class="category"><a href="#!"><i class="material-icons">book</i>One Piece Manga</a></li>
+        <li class="category"><a href="#!"><i class="material-icons">ondemand_video</i>One Piece Anime</a></li>
+        <li class="category"><a href="#!"><i class="material-icons">face</i>One Piece Cosplay</a></li>
+    </ul>
+    <nav id="navigation" class="scrollspy">
+        <div class="nav-wrapper container">
+            <a href="#header-parallax" class="brand-logo center"><img src="img/logo.png" alt="One Piece"><span class="hide-on-med-and-down">ne Piece</span></a>
+            <ul class="left">
+                <li>
+                    <div id="menu-icon-wrapper" data-activates="sidenav-onepiece"  class="menu-icon-wrapper button-sidenav-trigger show-on-large" style="visibility: hidden">
+                        <svg width="1000px" height="1000px">
+                            <path id="pathA" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+                            <path id="pathB" d="M 300 500 L 700 500"></path>
+                            <path id="pathC" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+                        </svg>
+                        <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+				    </div><!-- menu-icon-wrapper -->
+                </li>    
+            </ul>
+            <ul class="right">
+                <li><a href="#!"><i class="material-icons">search</i></a></li>
+                <li><a href="#calendar" class="modal-trigger hide-on-med-and-down"><i class="material-icons">view_module</i></a></li>
+                <li><a id="refresh-website" class="hide-on-med-and-down" href="#!"><i class="material-icons">refresh</i></a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="website-content">
+<!--        Content -->
+        <div class="container top-content">
+<!--             slider-->
+            <div class="slider">
+                <ul class="slides">
+                  <li>
+                    <img src="img/thumbnail/ace-one-piece-cosplay.jpg"> <!-- random image -->
+                    <div class="caption center-align">
+                      <h3>This is our big Tagline!</h3>
+                      <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="img/thumbnail/hancock-one-piece-cosplay.jpg"> <!-- random image -->
+                    <div class="caption left-align">
+                      <h3>Left Aligned Caption</h3>
+                      <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="img/thumbnail/one-piece-slide1.jpg"> <!-- random image -->
+                    <div class="caption right-align">
+                      <h3>Right Aligned Caption</h3>
+                      <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="img/thumbnail/one-piece-slide2.jpg"> <!-- random image -->
+                    <div class="caption center-align">
+                      <h3>This is our big Tagline!</h3>
+                      <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    </div>
+                  </li>
+                </ul>
+            </div>
+           
+           
+            <div class="row">
+                <div class="col s12">
+                    <h4 class="orange-text">NEWS</h4>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card medium hoverable">
+                        <div class="card-header">
+                            <a href="#!" class="author-avatar"><img src="img/luffy-avatar.png" alt="author avatar"></a>
+                            <span class="card-title">The long card title and when full weight</span>
+                            <span class="card-time">20/10/2016</span>
+                        </div>
+                        <div class="card-image">
+                            <img src="img/thumbnail/luffy-post.jpg">
+                        </div>
+                        <div class="card-content">
+                          <p>I am a very simple card. I am good at containing small bits of information.
+                          I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#"><i class="material-icons right">share</i></a>
+                            <a href="#"><i class="material-icons right">bookmark</i></a>
+                            <a href="#"><i class="material-icons right">favorite</i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col s12 m6 l4">
+                    <div class="card medium hoverable">
+                        <div class="card-header">
+                            <a href="#!" class="author-avatar"><img src="img/luffy-avatar.png" alt="author avatar"></a>
+                            <span class="card-title">Card Title</span>
+                            <span class="card-time">20/10/2016</span>
+                        </div>
+                        <div class="card-image">
+                            <img src="img/thumbnail/sanji-post.jpg">
+                        </div>
+                        <div class="card-content">
+                          <p>I am a very simple card. I am good at containing small bits of information.
+                          I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#"><i class="material-icons right">share</i></a>
+                            <a href="#"><i class="material-icons right">bookmark</i></a>
+                            <a href="#"><i class="material-icons right">favorite</i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card medium hoverable">
+                        <div class="card-header">
+                            <a href="#!" class="author-avatar"><img src="img/luffy-avatar.png" alt="author avatar"></a>
+                            <span class="card-title">Card Title</span>
+                            <span class="card-time">20/10/2016</span>
+                        </div>
+                        <div class="card-image">
+                            <img src="img/thumbnail/brook-post.jpg">
+                        </div>
+                        <div class="card-content">
+                          <p>I am a very simple card. I am good at containing small bits of information.
+                          I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#"><i class="material-icons right">share</i></a>
+                            <a href="#"><i class="material-icons right">bookmark</i></a>
+                            <a href="#"><i class="material-icons right">favorite</i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <a class="waves-effect waves-orange btn-flat orange-text text-darken-3 right">See More <i class="material-icons right">navigate_next</i></a>
+                </div>  
+            </div>
+            
+            <div class="row">
+                <div class="col s12">
+                    <h4 class="orange-text">Cosplay</h4>
+                </div>
+                <div class="col s12 m6 l4">
+                     <div class="card large hoverable">
+                        <div class="card-image waves-effect waves-block waves-light">
+                          <img class="activator" src="img/thumbnail/luffy-cosplay.jpg">
+                        </div>
+                        <div class="card-content">
+                            <a href="#!" class="author-avatar left"><img src="img/luffy-avatar.png" alt="author avatar"></a>
+                            <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+                            <p><a href="#">This is a link</a></p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#"><i class="material-icons right">share</i></a>
+                            <a href="#"><i class="material-icons right">bookmark</i></a>
+                            <a href="#"><i class="material-icons right">favorite</i></a>
+                        </div>
+                        <div class="card-reveal">
+                          <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        </div>
+                      </div>
+                </div>
+                <div class="col s12 m6 l4">
+                     <div class="card large hoverable">
+                        <div class="card-image waves-effect waves-block waves-light">
+                          <img class="activator" src="img/thumbnail/nami-cosplay.jpg">
+                        </div>
+                        <div class="card-content">
+                            <a href="#!" class="author-avatar left"><img src="img/luffy-avatar.png" alt="author avatar"></a>
+                            <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+                            <p><a href="#">This is a link</a></p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#"><i class="material-icons right">share</i></a>
+                            <a href="#"><i class="material-icons right">bookmark</i></a>
+                            <a href="#"><i class="material-icons right">favorite</i></a>
+                        </div>
+                        <div class="card-reveal">
+                          <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        </div>
+                      </div>
+                </div>
+                <div class="col s12 m6 l4">
+                     <div class="card large hoverable">
+                        <div class="card-image waves-effect waves-block waves-light">
+                          <img class="activator" src="img/thumbnail/hancock-cosplay.jpg">
+                        </div>
+                        <div class="card-content">
+                            <a href="#!" class="author-avatar left"><img src="img/luffy-avatar.png" alt="author avatar"></a>
+                            <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+                            <p><a href="#">This is a link</a></p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#"><i class="material-icons right">share</i></a>
+                            <a href="#"><i class="material-icons right">bookmark</i></a>
+                            <a href="#"><i class="material-icons right">favorite</i></a>
+                        </div>
+                        <div class="card-reveal">
+                          <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                        </div>
+                      </div>
+                </div>
+
+                <div class="col s12">
+                    <a class="waves-effect waves-orange btn-flat orange-text text-darken-3 right">See More <i class="material-icons right">navigate_next</i></a>
+                </div>  
+            </div>          
+        </div>
+        <div class="container">
+            <div class="row">
+             <div class="col s12 l8">
+                 <div id='calendar'></div>
+             </div>
+              <div class="col l4 s12 hide-on-med-and-down">
+                  <a href="#!" class="poster"><img src="img/advertisement-1.jpg" class="z-depth-1" alt="advertisement"></a>
+              </div>
+            </div>
+        </div>
+<!--        Footer-->
+        <footer class="page-footer blue-grey">
+          <div class="container">
+            <div class="row">
+             <div class="col s12 l8">
+                <h5 class="white-text">About us</h5>
+                <span class="grey-text text-lighten-3">
+                    Xin chào
+                </span>
+             </div>
+              <div class="col l4 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
+    </section>
+    
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <script src="js/script.js"></script>
+<!--    Calendar js-->
+    <script src="calendar-lib/js/moment.min.js"></script>
+    <script src="calendar-lib/js/fullcalendar.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/SVGmenuAnimate.js"></script>
+</body>
+</html>
