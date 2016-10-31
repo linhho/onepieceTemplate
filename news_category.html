@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--    <meta name="viewport" content="width=device-width, minimal-ui"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <meta content="#e65100" name="theme-color" /><!-- Windows Phone -->
+	<meta content="#e65100" name="msapplication-navbutton-color" /><!-- iOS Safari -->
+	<meta content="#e65100" name="apple-mobile-web-app-status-bar-style" />
+    <title>News category</title>
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+<!--    calendar css-->
+    <link rel="stylesheet" href="calendar-lib/css/fullcalendar.css">
+    <link rel="stylesheet" href="calendar-lib/css/fullcalendar.print.css" media='print'>
+    
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <script src="js/segment.min.js"></script>
+    <script src="js/ease.min.js"></script>
+</head>
+<body>     
+    <!-- The side navigation -->
+    <ul id="sidenav-onepiece" class="side-nav">
+        <li>
+          <img class="background" src="img/side-nav-bg.jpg">
+        </li>
+        <li class="category"><a href="#!" class="white-text"><i class="material-icons white-text">home</i>Home</a></li>
+        <li class="category"><a href="#!"><i class="material-icons">language</i>One Piece News</a></li>
+        <li class="category"><a href="#!"><i class="material-icons">book</i>One Piece Manga</a></li>
+        <li class="category"><a href="#!"><i class="material-icons">ondemand_video</i>One Piece Anime</a></li>
+        <li class="category"><a href="#!"><i class="material-icons">face</i>One Piece Cosplay</a></li>
+    </ul>
+    
+    <!-- The search overlay -->
+    <div id="searchForm" class="search-overlay row">
+  <!-- Button to close the overlay navigation -->
+        <div class="col s12">
+            <a href="#!" class="closeSearchForm right"><i class="material-icons">clear</i></a>
+        </div>
+
+          <!-- Overlay content -->
+        <div class="overlay-content col s12 white-text">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">search</i>
+                  <input id="search-text" type="tel" class="validate">
+                  <label for="search-text" class="white-text">Search Content</label>
+                </div>
+              </div>
+            </form>
+        </div>
+<!--        Search result-->
+        <div class="col s12 l6 offset-l3">
+                <div class="card horizontal">
+                  <div class="card-image">
+                    <img src="img/thumbnail/brook-post.jpg">
+                  </div>
+                  <div class="card-stacked">
+                    <div class="card-content">
+                        <span class="card-title">Card Title</span>
+                        <p>I am a very simple card. I am good at containing small bits of information.</p>
+                    </div>
+                    <div class="card-action">
+                      <a href="#">This is a link</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card horizontal">
+                  <div class="card-image">
+                    <img src="img/thumbnail/luffy-post.jpg">
+                  </div>
+                  <div class="card-stacked">
+                    <div class="card-content">
+                        <span class="card-title">Card Title</span>
+                        <p>I am a very simple card. I am good at containing small bits of information.</p>
+                    </div>
+                    <div class="card-action">
+                      <a href="#">This is a link</a>
+                    </div>
+                  </div>
+                </div>
+        </div>
+    </div>
+   
+    <nav id="navigation" class="scrollspy">
+        <div class="nav-wrapper container">
+            <a href="index.html" class="brand-logo center"><img src="img/logo.png" alt="One Piece"><span class="hide-on-med-and-down">ne Piece</span></a>
+<!--            sidenav menu button-->
+            <ul class="left">
+                <li>
+                    <div id="menu-icon-wrapper" data-activates="sidenav-onepiece"  class="menu-icon-wrapper button-sidenav-trigger show-on-large" style="visibility: hidden">
+                        <svg width="1000px" height="1000px">
+                            <path id="pathA" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+                            <path id="pathB" d="M 300 500 L 700 500"></path>
+                            <path id="pathC" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+                        </svg>
+                        <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+				    </div><!-- menu-icon-wrapper -->
+                </li>    
+            </ul>
+<!--            right navigation menu-->
+            <ul class="right">
+                <li><a href="#!" class="search-button"><i class="material-icons">search</i></a></li>
+                <li><a id="refresh-website" class="hide-on-med-and-down" href="#!"><i class="material-icons">refresh</i></a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="website-content">
+<!--        Content -->
+        <div class="container top-content">
+            <div class="row">
+                <div class="col s12 m6 l4">
+                    <div class="card medium hoverable">
+                        <div class="card-header">
+                            <a href="#!" class="author-avatar"><img src="img/luffy-avatar.png" alt="author avatar"></a>
+                            <span class="card-title">The long card title and when full weight</span>
+                            <span class="card-time">20/10/2016</span>
+                        </div>
+                        <div class="card-image">
+                            <img src="img/thumbnail/luffy-post.jpg">
+                        </div>
+                        <div class="card-content">
+                          <p>I am a very simple card. I am good at containing small bits of information.
+                          I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#"><i class="material-icons right">share</i></a>
+                            <a href="#"><i class="material-icons right">bookmark</i></a>
+                            <a href="#"><i class="material-icons right">favorite</i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col s12 m6 l4">
+                    <div class="card medium hoverable">
+                        <div class="card-header">
+                            <a href="#!" class="author-avatar"><img src="img/luffy-avatar.png" alt="author avatar"></a>
+                            <span class="card-title">Card Title</span>
+                            <span class="card-time">20/10/2016</span>
+                        </div>
+                        <div class="card-image">
+                            <img src="img/thumbnail/sanji-post.jpg">
+                        </div>
+                        <div class="card-content">
+                          <p>I am a very simple card. I am good at containing small bits of information.
+                          I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#"><i class="material-icons right">share</i></a>
+                            <a href="#"><i class="material-icons right">bookmark</i></a>
+                            <a href="#"><i class="material-icons right">favorite</i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card medium hoverable">
+                        <div class="card-header">
+                            <a href="#!" class="author-avatar"><img src="img/luffy-avatar.png" alt="author avatar"></a>
+                            <span class="card-title">Card Title</span>
+                            <span class="card-time">20/10/2016</span>
+                        </div>
+                        <div class="card-image">
+                            <img src="img/thumbnail/brook-post.jpg">
+                        </div>
+                        <div class="card-content">
+                          <p>I am a very simple card. I am good at containing small bits of information.
+                          I am convenient because I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#"><i class="material-icons right">share</i></a>
+                            <a href="#"><i class="material-icons right">bookmark</i></a>
+                            <a href="#"><i class="material-icons right">favorite</i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <ul class="pagination">
+                        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                        <li class="active"><a href="#!">1</a></li>
+                        <li class="waves-effect"><a href="#!">2</a></li>
+                        <li class="waves-effect"><a href="#!">3</a></li>
+                        <li class="waves-effect"><a href="#!">4</a></li>
+                        <li class="waves-effect"><a href="#!">5</a></li>
+                        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                    </ul>
+                </div>  
+            </div>                   
+        </div>
+
+<!--        Footer-->
+        <footer class="page-footer blue-grey">
+          <div class="container">
+            <div class="row">
+             <div class="col s12 l8">
+                <h5 class="white-text">About us</h5>
+                <span class="grey-text text-lighten-3">
+                    Xin chào
+                </span>
+             </div>
+              <div class="col l4 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
+    </section>
+    
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <script src="js/script.js"></script>
+<!--    Calendar js-->
+    <script src="calendar-lib/js/moment.min.js"></script>
+    <script src="calendar-lib/js/fullcalendar.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/SVGmenuAnimate.js"></script>
+</body>
+</html>

@@ -351,6 +351,10 @@ footer {
 .menu-icon-wrapper .menu-icon-trigger:focus {
 	outline: none;
 }
+
+.pagination{
+    margin: auto !important;
+}
 /*
 * Search
 */
