@@ -9,7 +9,6 @@ $(document).ready(function(){
         closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
     });// call side nav
     $('.slider').slider();//call slider
-    
     /*
     *click character avatar item
     */
@@ -34,5 +33,21 @@ $(document).ready(function(){
          //prevent native touch activity like scrolling
          e.preventDefault(); 
     });
+    
+    /*
+    * search 
+    */
+    $('.search-button').click(function(e){
+        e.preventDefault();
+        $('#searchForm').css('width', '100%');
+    });
+    $('.closeSearchForm').click(function(e){
+        e.preventDefault();
+        $('#searchForm').css('width', '0%');
+    });
+
+    function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+    }
     
 });

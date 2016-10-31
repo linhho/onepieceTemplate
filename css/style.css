@@ -64,6 +64,20 @@ nav {
 h2 {
     font-size: 2.2rem;
 }
+/*
+* scrollbar skin
+*/
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(251,140,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+/*
+*/
 
 #website-content {
     position: relative;
@@ -336,4 +350,41 @@ footer {
 .menu-icon-wrapper .menu-icon-trigger:hover,
 .menu-icon-wrapper .menu-icon-trigger:focus {
 	outline: none;
+}
+/*
+* Search
+*/
+
+.search-overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 696969696;
+    top: 0;
+    left: 0;
+    background-color: rgb(230,81,0);
+    background-color: rgba(230,81,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+.closeSearchForm{
+    margin-top: 10px;
+    color: white;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
 }

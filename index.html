@@ -21,8 +21,7 @@
     <script src="js/segment.min.js"></script>
     <script src="js/ease.min.js"></script>
 </head>
-<body>
-        
+<body>     
     <header id="header-parallax" class="parallax-container scrollspy">
       <div class="parallax"><img src="img/bg.jpg"></div>
       <div class="parallax-content row">
@@ -247,6 +246,7 @@
         </div>
       </div>
     </header>
+    <!-- The side navigation -->
     <ul id="sidenav-onepiece" class="side-nav">
         <li>
           <img class="background" src="img/side-nav-bg.jpg">
@@ -257,9 +257,32 @@
         <li class="category"><a href="#!"><i class="material-icons">ondemand_video</i>One Piece Anime</a></li>
         <li class="category"><a href="#!"><i class="material-icons">face</i>One Piece Cosplay</a></li>
     </ul>
+    
+    <!-- The search overlay -->
+    <div id="searchForm" class="search-overlay row">
+  <!-- Button to close the overlay navigation -->
+    <div class="col s12">
+        <a href="#!" class="closeSearchForm right"><i class="material-icons">clear</i></a>
+    </div>
+     
+      <!-- Overlay content -->
+    <div class="overlay-content col s12 white-text">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">search</i>
+              <input id="search-text" type="tel" class="validate">
+              <label for="search-text" class="white-text">Search Content</label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+   
     <nav id="navigation" class="scrollspy">
         <div class="nav-wrapper container">
             <a href="#header-parallax" class="brand-logo center"><img src="img/logo.png" alt="One Piece"><span class="hide-on-med-and-down">ne Piece</span></a>
+<!--            sidenav menu button-->
             <ul class="left">
                 <li>
                     <div id="menu-icon-wrapper" data-activates="sidenav-onepiece"  class="menu-icon-wrapper button-sidenav-trigger show-on-large" style="visibility: hidden">
@@ -272,9 +295,9 @@
 				    </div><!-- menu-icon-wrapper -->
                 </li>    
             </ul>
+<!--            right navigation menu-->
             <ul class="right">
-                <li><a href="#!"><i class="material-icons">search</i></a></li>
-                <li><a href="#calendar" class="modal-trigger hide-on-med-and-down"><i class="material-icons">view_module</i></a></li>
+                <li><a href="#!" class="search-button"><i class="material-icons">search</i></a></li>
                 <li><a id="refresh-website" class="hide-on-med-and-down" href="#!"><i class="material-icons">refresh</i></a></li>
             </ul>
         </div>
